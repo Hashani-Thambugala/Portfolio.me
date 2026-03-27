@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Hashani Thambugala | UI/UX Designer & Frontend Developer Portfolio</title>
+  <meta name="description" content="Hashani Thambugala - UI/UX Designer and Frontend Developer Portfolio. View my projects in UI/UX design, logo design, and web development. Available for freelance and full-time opportunities.">
+  <meta name="keywords" content="UI/UX Designer, Portfolio, Logo Design, Frontend Developer, Hashani Thambugala, Web Designer, Sri Lanka Designer">
+  <meta name="author" content="Hashani Thambugala">
+  <meta property="og:title" content="Hashani Thambugala | UI/UX Designer Portfolio">
+  <meta property="og:description" content="Creative UI/UX Designer & Frontend Developer specializing in beautiful, functional digital experiences.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Google Fonts + Font Awesome 6 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at 10% 20%, #0a0c1a, #03050b);
+      color: #eef5ff;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #12172f;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #5f7ef2;
+      border-radius: 10px;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.8rem;
+    }
+
+    nav {
+      backdrop-filter: blur(16px);
+      background: rgba(8, 12, 28, 0.75);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(95, 126, 242, 0.25);
+      padding: 0.8rem 0;
+    }
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(125deg, #b6ccff, #7e9aff, #5f7ef2);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.6rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #cddcff;
+      transition: 0.2s;
+      font-size: 0.9rem;
+    }
+    .nav-links a:hover {
+      color: #b1c6ff;
+      text-shadow: 0 0 6px #5f7ef2;
+    }
+    .btn-resume {
+      background: rgba(95, 126, 242, 0.2);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(95, 126, 242, 0.6);
+      color: #eef5ff;
+      padding: 0.45rem 1.2rem;
+      border-radius: 60px;
+      font-weight: 500;
+      transition: all 0.2s;
+      cursor: pointer;
+      font-size: 0.8rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-resume:hover {
+      background: #5f7ef2;
+      color: #03050b;
+      border-color: #5f7ef2;
+      transform: scale(0.96);
+    }
+
+    section {
+      padding: 3.5rem 0;
+    }
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+      background: linear-gradient(135deg, #ffffff, #b1ccff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 55%;
+      height: 3px;
+      background: linear-gradient(90deg, #5f7ef2, #a980ff);
+      border-radius: 3px;
+    }
+
+    .hero {
+      padding: 2rem 0 2.5rem 0;
+    }
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .hero-content {
+      flex: 1.2;
+    }
+    .badge {
+      background: rgba(95, 126, 242, 0.2);
+      backdrop-filter: blur(4px);
+      border: 0.5px solid rgba(95, 126, 242, 0.5);
+      color: #b6ccff;
+      padding: 0.2rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 0.8rem;
+    }
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+      background: linear-gradient(to right, #ffffff, #b8caff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero-highlight {
+      background: linear-gradient(135deg, #7e9aff, #b46eff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero-desc {
+      font-size: 1rem;
+      color: #bbc9ff;
+      max-width: 500px;
+      margin: 0.8rem 0 1.5rem;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: linear-gradient(105deg, #5f7ef2, #8b5cf6);
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(95, 126, 242, 0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(95, 126, 242, 0.5);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.2px solid #5f7ef2;
+      color: #cddcff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+    }
+    .btn-outline:hover {
+      background: rgba(95, 126, 242, 0.2);
+      border-color: #8b5cf6;
+      color: white;
+    }
+    .hero-image {
+      flex: 0.7;
+      text-align: center;
+    }
+    .avatar-frame {
+      background: linear-gradient(135deg, #1e2448, #0b0f24);
+      border-radius: 45% 55% 65% 35% / 50% 45% 55% 50%;
+      padding: 0.4rem;
+      box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(95,126,242,0.2);
+      max-width: 210px;
+      margin: 0 auto;
+    }
+    .avatar-frame img {
+      width: 100%;
+      border-radius: inherit;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      display: block;
+    }
+
+    .skills-panel {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.2rem;
+    }
+    .skill-chip {
+      background: rgba(20, 28, 55, 0.7);
+      backdrop-filter: blur(2px);
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.75rem;
+      border: 0.5px solid rgba(95, 126, 242, 0.5);
+      color: #c9d6ff;
+    }
+
+    /* PROJECT CARDS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: rgba(12, 16, 34, 0.65);
+      backdrop-filter: blur(6px);
+      border-radius: 1.2rem;
+      overflow: hidden;
+      transition: all 0.25s ease;
+      border: 1px solid rgba(95, 126, 242, 0.25);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(139, 92, 246, 0.6);
+      box-shadow: 0 16px 28px -8px rgba(95, 126, 242, 0.25);
+    }
+    .project-img {
+      height: 180px;
+      background: rgba(25, 32, 70, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover .project-img img {
+      transform: scale(1.05);
+    }
+    .project-info {
+      padding: 1.2rem;
+    }
+    .project-info h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      color: #f0f3ff;
+    }
+    .project-info p {
+      font-size: 0.8rem;
+      color: #b7c2f0;
+      line-height: 1.4;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.7rem 0;
+    }
+    .tag {
+      background: rgba(95, 126, 242, 0.2);
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: #bac8ff;
+    }
+    .project-links {
+      margin-top: 0.8rem;
+      display: flex;
+      gap: 1rem;
+    }
+    .project-links a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.75rem;
+      color: #8aa3ff;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .project-links a:hover {
+      color: #c1d0ff;
+    }
+
+    /* LOGO GRID SECTION */
+    .logo-showcase {
+      background: rgba(6, 8, 20, 0.5);
+      border-radius: 2rem;
+      padding: 0.5rem 0 1rem 0;
+    }
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.8rem;
+      margin-top: 1.8rem;
+    }
+    .logo-card {
+      background: rgba(18, 24, 48, 0.7);
+      backdrop-filter: blur(4px);
+      border-radius: 1.5rem;
+      padding: 1.2rem;
+      text-align: center;
+      transition: all 0.25s ease;
+      border: 1px solid rgba(95, 126, 242, 0.3);
+      cursor: default;
+    }
+    .logo-card:hover {
+      transform: translateY(-6px);
+      border-color: #8b5cf6;
+      background: rgba(25, 32, 70, 0.8);
+      box-shadow: 0 12px 24px -8px rgba(95, 126, 242, 0.3);
+    }
+    .logo-img-wrapper {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 1rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 130px;
+    }
+    .logo-img-wrapper img {
+      max-width: 100%;
+      max-height: 100px;
+      object-fit: contain;
+      transition: transform 0.2s;
+    }
+    .logo-card:hover .logo-img-wrapper img {
+      transform: scale(1.02);
+    }
+    .logo-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      color: #eef3ff;
+    }
+    .logo-desc {
+      font-size: 0.7rem;
+      color: #a7b7f0;
+      margin-top: 0.2rem;
+    }
+    .logo-badge {
+      display: inline-block;
+      background: rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      font-size: 0.6rem;
+      padding: 0.2rem 0.7rem;
+      margin-top: 0.5rem;
+      color: #c2cfff;
+    }
+
+    /* Experience & Education */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .exp-item, .edu-item {
+      background: rgba(12, 16, 34, 0.6);
+      backdrop-filter: blur(5px);
+      border-radius: 1rem;
+      padding: 1rem 1.2rem;
+      border: 1px solid rgba(95, 126, 242, 0.25);
+    }
+    .exp-header, .edu-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 0.4rem;
+    }
+    .exp-title, .edu-title {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .exp-company, .edu-institution {
+      color: #a1b2ff;
+      font-weight: 500;
+      font-size: 0.8rem;
+    }
+    .exp-date, .edu-date {
+      color: #8f9fd9;
+      font-size: 0.7rem;
+    }
+
+    /* Contact Section - Fully Centered with CV Button */
+    .contact-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: rgba(8, 12, 28, 0.6);
+      backdrop-filter: blur(8px);
+      border-radius: 1.5rem;
+      padding: 2rem 1.8rem;
+      border: 1px solid rgba(95, 126, 242, 0.3);
+      max-width: 600px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .contact-info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.2rem;
+    }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .contact-detail i {
+      width: 28px;
+      color: #7e9aff;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    .contact-detail span {
+      word-break: break-word;
+    }
+    .cv-download-btn {
+      background: linear-gradient(105deg, #5f7ef2, #8b5cf6);
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      margin: 0.5rem 0 1rem 0;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(95, 126, 242, 0.3);
+    }
+    .cv-download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(95, 126, 242, 0.5);
+    }
+    .social-links {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 0.8rem;
+      justify-content: center;
+    }
+    .social-links a {
+      background: rgba(95, 126, 242, 0.15);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #baceff;
+      transition: 0.2s;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+    .social-links a:hover {
+      background: #5f7ef2;
+      color: #03050b;
+      transform: translateY(-3px);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 1px solid rgba(95, 126, 242, 0.2);
+      color: #97abdd;
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 1.2rem; }
+      .hero-content h1 { font-size: 2rem; }
+      .nav-wrapper { flex-direction: column; gap: 0.6rem; }
+      .nav-links { gap: 1rem; justify-content: center; }
+      .section-title { font-size: 1.6rem; }
+      .hero-grid { flex-direction: column-reverse; text-align: center; gap: 1rem; }
+      .hero-buttons { justify-content: center; }
+      .skills-panel { justify-content: center; }
+      .section-title:after { left: 20%; width: 60%; }
+      .avatar-frame { max-width: 160px; }
+      .contact-flex { padding: 1.5rem 1rem; margin: 0 1rem; }
+      .contact-detail { flex-direction: column; gap: 0.3rem; align-items: center; text-align: center; }
+      .logo-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .projects-grid { grid-template-columns: 1fr; }
+      .hero-content h1 { font-size: 1.7rem; }
+      .btn-primary, .btn-outline { padding: 0.5rem 1rem; font-size: 0.75rem; }
+      .logo { font-size: 1.3rem; }
+      section { padding: 2.5rem 0; }
+      .project-img { height: 160px; }
+      .logo-img-wrapper { min-height: 100px; }
+      .contact-flex { padding: 1.2rem 0.8rem; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-wrapper">
+    <div class="logo">✦ Hashani Thambugala</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#logo-design">Logos</a></li>
+      <li><a href="#experience">Resume</a></li>
+      <li><a href="#contact">Connect</a></li>
+    </ul>
+    <a href="cv/Hashani Thambugala_CV.pdf" download class="btn-resume" id="downloadResumeBtn">
+      <i class="fas fa-download"></i> CV
+    </a>
+  </div>
+</nav>
+
+<main>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge"><i class="fas fa-moon-stars"></i> UI/UX Designer & Frontend Developer</span>
+        <h1>Hashani <span class="hero-highlight">Thambugala</span><br>UI engineer & creative</h1>
+        <p class="hero-desc">Design-forward developer building fluid, futuristic interfaces. Turning ideas into interactive experiences.</p>
+        <p class="hero-desc">I am a passionate and detail-oriented UI/UX Designer with a strong interest in creating user-friendly and visually appealing digital experiences. I have experience in designing intuitive interfaces, wireframes, and prototypes, focusing on improving usability and user satisfaction.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary"><i class="fas fa-arrow-down"></i> Projects</a>
+          <a href="#contact" class="btn-outline"><i class="fas fa-paper-plane"></i> Contact</a>
+        </div>
+        <br>
+        <h2 class="section-title">✦ My skills</h2>
+        <div class="skills-panel">
+          <span class="skill-chip">React</span><span class="skill-chip">Next.js</span><span class="skill-chip">Tailwind</span>
+          <span class="skill-chip">Figma</span><span class="skill-chip">TypeScript</span><span class="skill-chip">Node.js</span>
+          <span class="skill-chip">Wireframe</span><span class="skill-chip">JavaScript</span><span class="skill-chip">Bootstrap</span>
+          <span class="skill-chip">React Native</span><span class="skill-chip">Sketch</span><span class="skill-chip">Mockup</span>
+          <span class="skill-chip">UI Design</span><span class="skill-chip">Framer Motion</span><span class="skill-chip">Responsive Design</span>
+          <span class="skill-chip">Canva</span><span class="skill-chip">HTML/CSS</span><span class="skill-chip">LARAVEL</span>
+          <span class="skill-chip">User research</span><span class="skill-chip">Prototyping</span><span class="skill-chip">Trello</span>
+          <span class="skill-chip">Brand Identity</span><span class="skill-chip">Logo Design</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="avatar-frame">
+          <img src="img/me.jpeg" alt="Hashani Thambugala - UI/UX Designer">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">✦ featured work</h2>
+      <div class="projects-grid" id="projectsGrid">
+        <div class="project-card">
+          <div class="project-img">
+            <img src="img/carapp.png" alt="Vroom Vroom Car Rental App">
+          </div>
+          <div class="project-info">
+            <h3>Vroom Vroom - Car Rental App</h3>
+            <p>The main goal of the car rental app is to provide users with a seamless and reliable platform to search, book, and manage car rentals with ease.</p>
+            <div class="project-links"><a href="https://www.behance.net/gallery/234491911/VROOM-VROOM-Car-Rental-App" target="_blank"><i class="fab fa-behance"></i> Behance</a></div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img src="img/party.png" alt="Cheers Event Planner App">
+          </div>
+          <div class="project-info">
+            <h3>Cheers - Event Planner App</h3>
+            <p>The goal of the event app is to make event planning and participation simple, organized, and engaging for organizers and attendees.</p>
+            <div class="project-links"><a href="https://www.behance.net/gallery/234523157/CHEERS-Event-Planning-App" target="_blank"><i class="fab fa-behance"></i> Behance</a></div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img src="img/tourism.png" alt="Funny Vacay Tourism Website">
+          </div>
+          <div class="project-info">
+            <h3>Funny Vacay - Tourism Website</h3>
+            <p>All-in-one travel website that helps users easily discover destinations, book flights and hotels, manage itineraries, and access local recommendations.</p>
+            <div class="project-links"><a href="https://www.behance.net/gallery/234649647/Funny-Vacay-Travel-website-design" target="_blank"><i class="fab fa-behance"></i> Behance</a></div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img src="img/Happy Pet.png" alt="Happy Pet Vet App">
+          </div>
+          <div class="project-info">
+            <h3>Happy Pet - Vet application</h3>
+            <p>Helps pet owners manage care: vaccination schedule, medical records, professional info, and pet care tips.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img src="img/Salary_management.jpg" alt="Saloon Suwani Salary Management">
+          </div>
+          <div class="project-info">
+            <h3>Saloon Suwani - Salary Management</h3>
+            <p>Salon website with salary management (OT, leave, tax), CRUD operations, employee search, report generation. Built with MERN stack.</p>
+            <div class="project-tags"><span class="tag">MongoDB</span><span class="tag">Express</span><span class="tag">React</span><span class="tag">Next.js</span></div>
+            <div class="project-links"><a href="https://github.com/Hashani-Thambugala/Saloon_Suwani_MERN" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img src="img/note.png" alt="TODO Note App">
+          </div>
+          <div class="project-info">
+            <h3>TODO - Note App</h3>
+            <p>Kotlin-based note app to store daily activities and notes, with update/delete features. Built with Android Studio and XML.</p>
+            <div class="project-tags"><span class="tag">Kotlin</span><span class="tag">XML</span><span class="tag">Android Studio</span></div>
+            <div class="project-links"><a href="https://github.com/Hashani-Thambugala/TODO_App" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGO DESIGN SECTION -->
+  <section id="logo-design">
+    <div class="container logo-showcase">
+      <h2 class="section-title">🎨 logo design gallery</h2>
+      <p style="color: #b7c2f0; font-size: 0.85rem; margin-bottom: 1rem;">Original brand marks & identity concepts crafted with passion — each logo tells a story.</p>
+      <div class="logo-grid">
+        <div class="logo-card">
+          <div class="logo-img-wrapper">
+            <img src="img/Cheers.png" alt="Cheers Logo">
+          </div>
+          <div class="logo-title">Cheers</div>
+          <div class="logo-desc">Modern festive mark, celebration vibe</div>
+          <span class="logo-badge"><i class="fas fa-glass-cheers"></i> Events & parties</span>
+        </div>
+        <div class="logo-card">
+          <div class="logo-img-wrapper">
+            <img src="img/FUNNY VACAY.png" alt="Funny Vacay Logo">
+          </div>
+          <div class="logo-title">Funny Vacay</div>
+          <div class="logo-desc">Playful wanderlust wordmark + icon</div>
+          <span class="logo-badge"><i class="fas fa-umbrella-beach"></i> Travel & leisure</span>
+        </div>
+        <div class="logo-card">
+          <div class="logo-img-wrapper">
+            <img src="img/petlogo.png" alt="Happy Pet Logo">
+          </div>
+          <div class="logo-title">Happy Pet</div>
+          <div class="logo-desc">Warm, caring veterinary emblem</div>
+          <span class="logo-badge"><i class="fas fa-paw"></i> Pet care</span>
+        </div>
+        <div class="logo-card">
+          <div class="logo-img-wrapper">
+            <img src="img/networkinglogo.png" alt="Networking Logo">
+          </div>
+          <div class="logo-title">Networking</div>
+          <div class="logo-desc">Elegant, minimalist networking</div>
+          <span class="logo-badge"><i class="fas fa-wifi"></i> connector</span>
+        </div>
+        <div class="logo-card">
+          <div class="logo-img-wrapper">
+            <img src="img/TODO.png" alt="TODO Logo">
+          </div>
+          <div class="logo-title">ToDO</div>
+          <div class="logo-desc">Note app identity</div>
+          <span class="logo-badge"><i class="fas fa-book"></i>Application</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">⚡ journey & learning</h2>
+      <div class="timeline">
+        <div class="exp-item">
+          <div class="exp-header"><span class="exp-title">UI/UX Designer & Frontend Developer</span><span class="exp-date">Present</span></div>
+          <div class="exp-company">Freelance & Personal Projects</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-header"><span class="edu-title">BSc (Hons) Information Technology</span><span class="edu-date">2022 – 2027</span></div>
+          <div class="edu-institution">Sri Lanka Institute of Information Technology</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-header"><span class="edu-title">UI/UX Professional Certificate</span><span class="edu-date">2022</span></div>
+          <div class="edu-institution">Le Wagon / Simple Learn · Interaction Design Specialization</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section with CV Download -->
+  <section id="contact">
+    <div class="container">
+      <div style="text-align: center;">
+        <h2 class="section-title" style="display: inline-block; text-align: left;">✧ connect with me</h2>
+      </div>
+      <div class="contact-flex">
+        <div class="contact-info">
+          <div class="contact-detail"><i class="fas fa-envelope"></i> <span>hashanithambugala2002@gmail.com</span></div>
+          <div class="contact-detail"><i class="fas fa-phone-alt"></i> <span>+94 76 065 3804</span></div>
+          
+          <!-- CV Download Button -->
+          <!-- <a href="cv/Hashani Thambugala_CV.pdf" download class="cv-download-btn">
+            <i class="fas fa-file-pdf"></i> Download CV (PDF)
+          </a> -->
+          
+          <div class="social-links">
+            <a href="https://github.com/Hashani-Thambugala" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/hashani-thambugala-3147b0314/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.behance.net/hashanithambugala" aria-label="Behance" target="_blank"><i class="fab fa-behance"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Hashani Thambugala. All rights reserved. | Built with <i class="fas fa-heart" style="color: #5f7ef2;"></i> for the design community</p>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll for navigation
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if(targetId === "#" || targetId === "") return;
+      const targetElement = document.querySelector(targetId);
+      if(targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Track CV download for analytics (optional)
+  const cvButtons = document.querySelectorAll('.cv-download-btn, #downloadResumeBtn');
+  cvButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      console.log('CV downloaded - ' + new Date().toISOString());
+      // You can add Google Analytics or other tracking here
+    });
+  });
+
+  console.log('✨ Portfolio ready! Deployed on GitHub Pages. Make sure to:');
+  console.log('1. Create a "cv" folder and add your CV PDF');
+  console.log('2. Add all images to "img" folder');
+  console.log('3. Push to GitHub and enable GitHub Pages');
+</script>
+</body>
+</html>
